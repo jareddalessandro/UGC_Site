@@ -1,0 +1,70 @@
+const portfolioData = [
+  {
+    id: 1,
+    title: "Summer Glow Routine",
+    brand: "Luxe Skincare",
+    category: "Beauty",
+    type: "image",
+    src: "https://placehold.co/480x600/D4BA94/FFFFFF?text=Summer+Glow",
+  },
+  {
+    id: 2,
+    title: "Morning Matcha",
+    brand: "Zen Tea Co.",
+    category: "Food",
+    type: "video",
+    src: "https://placehold.co/480x600/A89B8C/FFFFFF?text=Matcha+Video",
+    // Replace with actual video URL when ready:
+    // videoSrc: "/videos/matcha.mp4",
+  },
+  {
+    id: 3,
+    title: "Cozy Fall Lookbook",
+    brand: "Thread & Co.",
+    category: "Lifestyle",
+    type: "image",
+    src: "https://placehold.co/480x600/C9A87C/FFFFFF?text=Fall+Lookbook",
+  },
+  {
+    id: 4,
+    title: "Lip Oil Review",
+    brand: "Petal Beauty",
+    category: "Beauty",
+    type: "video",
+    src: "https://placehold.co/480x600/E0D5C5/A89B8C?text=Lip+Oil",
+  },
+  {
+    id: 5,
+    title: "Homemade Pasta Night",
+    brand: "Cucina Fresca",
+    category: "Food",
+    type: "image",
+    src: "https://placehold.co/480x600/B8956A/FFFFFF?text=Pasta+Night",
+  },
+  {
+    id: 6,
+    title: "Self-Care Sunday",
+    brand: "Aura Wellness",
+    category: "Lifestyle",
+    type: "image",
+    src: "https://placehold.co/480x600/D4BA94/FFFFFF?text=Self+Care",
+  },
+  {
+    id: 7,
+    title: "Blush & Bronzer Tutorial",
+    brand: "Rose Cosmetics",
+    category: "Beauty",
+    type: "video",
+    src: "https://placehold.co/480x600/C9A87C/FFFFFF?text=Blush+Tutorial",
+  },
+  {
+    id: 8,
+    title: "Smoothie Bowl Recipe",
+    brand: "Nourish Co.",
+    category: "Food",
+    type: "image",
+    src: "https://placehold.co/480x600/A89B8C/FFFFFF?text=Smoothie+Bowl",
+  },
+];
+
+export default portfolioData;
