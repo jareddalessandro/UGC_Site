@@ -58,18 +58,18 @@ export default function Rates() {
           style={{
             display: "grid",
             gap: "2rem",
-            alignItems: "start",
+            alignItems: "stretch",
           }}
           className="grid-cols-1 md:grid-cols-3"
         >
           {ratesData.map((pkg, index) => (
-            <ScrollReveal key={pkg.id} delay={index * 0.1}>
+            <ScrollReveal key={pkg.id} delay={index * 0.1} style={{ display: "flex" }}>
               <div
                 style={{
                   position: "relative",
                   display: "flex",
                   flexDirection: "column",
-                  height: "100%",
+                  width: "100%",
                   padding: "2.75rem 2.25rem",
                   borderRadius: "1rem",
                   border: pkg.highlighted
