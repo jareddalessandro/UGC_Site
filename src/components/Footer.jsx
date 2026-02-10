@@ -70,7 +70,7 @@ export default function Footer() {
             color: "var(--color-stone)",
           }}
         >
-          &copy; {new Date().getFullYear()} Caitlyn Dalessandro. All rights
+          &copy; {new Date().getFullYear()} Syncope Industries LLC. All rights
           reserved.
         </p>
       </div>

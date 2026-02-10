@@ -52,13 +52,13 @@ export default function Videography() {
           </div>
         </ScrollReveal>
 
-        {/* Video Grid */}
+        {/* Video Grid - portrait TikTok embeds */}
         <div
           style={{
             display: "grid",
-            gap: "2.5rem",
+            gap: "2rem",
           }}
-          className="grid-cols-1 md:grid-cols-2"
+          className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
         >
           {videographyData.map((video, index) => (
             <ScrollReveal key={video.id} delay={index * 0.1}>
@@ -79,11 +79,11 @@ export default function Videography() {
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
-                {/* 16:9 Embed */}
+                {/* 9:16 Portrait Embed */}
                 <div
                   style={{
                     position: "relative",
-                    aspectRatio: "16 / 9",
+                    aspectRatio: "9 / 16",
                     backgroundColor: "var(--color-cream-dark)",
                   }}
                 >
@@ -103,10 +103,10 @@ export default function Videography() {
                 </div>
 
                 {/* Video Info */}
-                <div style={{ padding: "1.5rem 1.75rem" }}>
+                <div style={{ padding: "1.25rem 1.25rem" }}>
                   <p
                     style={{
-                      fontSize: "0.8125rem",
+                      fontSize: "0.75rem",
                       fontWeight: 600,
                       textTransform: "uppercase",
                       letterSpacing: "0.1em",
@@ -117,9 +117,9 @@ export default function Videography() {
                   </p>
                   <h3
                     style={{
-                      marginTop: "0.375rem",
+                      marginTop: "0.25rem",
                       fontFamily: "var(--font-serif)",
-                      fontSize: "1.25rem",
+                      fontSize: "1.0625rem",
                       fontWeight: 600,
                       color: "var(--color-ink)",
                     }}

@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 const socials = [
   { icon: FiInstagram, label: "Instagram", href: "#" },
   { icon: FaTiktok, label: "TikTok", href: "#" },
-  { icon: FiMail, label: "Email", href: "mailto:hello@example.com" },
+  { icon: FiMail, label: "Email", href: "mailto:caitlyndalessandro@gmail.com" },
 ];
 
 const inputStyles = {
