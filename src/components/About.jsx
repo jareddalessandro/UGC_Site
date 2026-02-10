@@ -8,50 +8,132 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-white px-6 py-24 md:py-32">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-16">
+    <section
+      id="about"
+      style={{
+        backgroundColor: "white",
+        padding: "8rem 2rem",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "grid",
+          alignItems: "center",
+          gap: "4rem",
+        }}
+        className="md:grid-cols-2"
+      >
         {/* Photo */}
         <ScrollReveal>
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl bg-cream-dark">
+          <div
+            style={{
+              position: "relative",
+              aspectRatio: "4 / 5",
+              maxWidth: "420px",
+              margin: "0 auto",
+              overflow: "hidden",
+              borderRadius: "1rem",
+              backgroundColor: "var(--color-cream-dark)",
+            }}
+          >
             <img
               src="https://placehold.co/480x600/E0D5C5/A89B8C?text=Caitlyn"
               alt="Caitlyn Dalessandro"
-              className="h-full w-full object-cover"
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
-            {/* Gold accent corner */}
-            <div className="absolute -bottom-3 -right-3 h-24 w-24 rounded-tl-2xl border-l-4 border-t-4 border-gold" />
+            <div
+              style={{
+                position: "absolute",
+                bottom: "-12px",
+                right: "-12px",
+                width: "100px",
+                height: "100px",
+                borderLeft: "4px solid var(--color-gold)",
+                borderTop: "4px solid var(--color-gold)",
+                borderTopLeftRadius: "1rem",
+              }}
+            />
           </div>
         </ScrollReveal>
 
         {/* Bio */}
         <ScrollReveal delay={0.15}>
-          <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-gold">
+          <p
+            style={{
+              marginBottom: "0.75rem",
+              fontSize: "0.875rem",
+              fontWeight: 500,
+              textTransform: "uppercase",
+              letterSpacing: "0.2em",
+              color: "var(--color-gold)",
+            }}
+          >
             About Me
           </p>
-          <h2 className="font-serif text-3xl font-semibold text-ink sm:text-4xl">
+          <h2
+            style={{
+              fontFamily: "var(--font-serif)",
+              fontSize: "clamp(2rem, 4vw, 3.5rem)",
+              fontWeight: 600,
+              color: "var(--color-ink)",
+              lineHeight: 1.15,
+            }}
+          >
             Hey, I&rsquo;m Caitlyn!
           </h2>
-          <p className="mt-6 leading-relaxed text-charcoal/70">
+          <p
+            style={{
+              marginTop: "1.75rem",
+              fontSize: "1.0625rem",
+              lineHeight: 1.8,
+              color: "var(--color-stone)",
+            }}
+          >
             I&rsquo;m a UGC creator specializing in beauty, lifestyle, and food
             content. I help brands tell their story through authentic,
             relatable content that resonates with real people. From unboxings
             to tutorials, I craft scroll-stopping videos and photos that drive
             engagement and build trust.
           </p>
-          <p className="mt-4 leading-relaxed text-charcoal/70">
+          <p
+            style={{
+              marginTop: "1.25rem",
+              fontSize: "1.0625rem",
+              lineHeight: 1.8,
+              color: "var(--color-stone)",
+            }}
+          >
             Based in the US, I&rsquo;ve partnered with brands of all sizes to
             create content that feels native to the platform and genuine to the
             audience.
           </p>
 
           {/* Stats */}
-          <div className="mt-10 flex gap-8">
+          <div style={{ marginTop: "3rem", display: "flex", gap: "3rem" }}>
             {stats.map((s) => (
               <div key={s.label}>
-                <p className="font-serif text-2xl font-semibold text-gold">
+                <p
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.75rem",
+                    fontWeight: 600,
+                    color: "var(--color-gold)",
+                  }}
+                >
                   {s.value}
                 </p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wider text-stone">
+                <p
+                  style={{
+                    marginTop: "0.25rem",
+                    fontSize: "0.75rem",
+                    fontWeight: 500,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    color: "var(--color-stone)",
+                  }}
+                >
                   {s.label}
                 </p>
               </div>

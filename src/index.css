@@ -4,15 +4,15 @@
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
 
-  --color-cream: #FAF8F5;
-  --color-cream-dark: #F0ECE6;
-  --color-charcoal: #2C2C2C;
-  --color-ink: #1A1A1A;
-  --color-gold: #C9A87C;
-  --color-gold-light: #D4BA94;
-  --color-gold-dark: #B8956A;
-  --color-sand: #E0D5C5;
-  --color-stone: #A89B8C;
+  --color-cream: oklch(0.97 0.01 80);
+  --color-cream-dark: oklch(0.94 0.015 80);
+  --color-charcoal: oklch(0.3 0.01 260);
+  --color-ink: oklch(0.2 0.01 260);
+  --color-gold: oklch(0.72 0.1 70);
+  --color-gold-light: oklch(0.78 0.08 70);
+  --color-gold-dark: oklch(0.65 0.11 70);
+  --color-sand: oklch(0.88 0.03 75);
+  --color-stone: oklch(0.7 0.03 65);
 }
 
 * {

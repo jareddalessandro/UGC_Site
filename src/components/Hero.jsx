@@ -12,26 +12,62 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-cream px-6">
-      {/* Subtle decorative circle */}
-      <div className="pointer-events-none absolute -top-32 right-0 h-[500px] w-[500px] rounded-full bg-gold/5" />
+    <section
+      style={{
+        position: "relative",
+        display: "flex",
+        minHeight: "100vh",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        backgroundColor: "var(--color-cream)",
+        padding: "6rem 2rem",
+      }}
+    >
+      {/* Decorative circle */}
+      <div
+        style={{
+          position: "absolute",
+          top: "-8rem",
+          right: "-4rem",
+          width: "600px",
+          height: "600px",
+          borderRadius: "50%",
+          backgroundColor: "var(--color-gold)",
+          opacity: 0.04,
+          pointerEvents: "none",
+        }}
+      />
 
       <motion.div
         variants={stagger}
         initial="hidden"
         animate="show"
-        className="relative z-10 text-center"
+        style={{ position: "relative", zIndex: 10, textAlign: "center" }}
       >
         <motion.p
           variants={fadeUp}
-          className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-gold"
+          style={{
+            marginBottom: "1.25rem",
+            fontSize: "0.875rem",
+            fontWeight: 500,
+            textTransform: "uppercase",
+            letterSpacing: "0.25em",
+            color: "var(--color-gold)",
+          }}
         >
           UGC Creator
         </motion.p>
 
         <motion.h1
           variants={fadeUp}
-          className="font-serif text-5xl font-semibold leading-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl"
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "clamp(3rem, 8vw, 7rem)",
+            fontWeight: 600,
+            lineHeight: 1.05,
+            color: "var(--color-ink)",
+          }}
         >
           Caitlyn
           <br />
@@ -40,7 +76,13 @@ export default function Hero() {
 
         <motion.p
           variants={fadeUp}
-          className="mx-auto mt-6 max-w-md text-base text-charcoal/60 sm:text-lg"
+          style={{
+            margin: "2rem auto 0",
+            maxWidth: "480px",
+            fontSize: "1.125rem",
+            lineHeight: 1.7,
+            color: "var(--color-stone)",
+          }}
         >
           Authentic, scroll-stopping content that connects brands with their
           audience.
@@ -48,8 +90,29 @@ export default function Hero() {
 
         <motion.a
           variants={fadeUp}
-          href="#portfolio"
-          className="mt-10 inline-block rounded-full border-2 border-gold bg-transparent px-8 py-3 text-sm font-semibold uppercase tracking-widest text-gold transition-colors hover:bg-gold hover:text-white"
+          href="#videography"
+          style={{
+            display: "inline-block",
+            marginTop: "3rem",
+            padding: "1rem 2.5rem",
+            border: "2px solid var(--color-gold)",
+            borderRadius: "999px",
+            fontSize: "0.875rem",
+            fontWeight: 600,
+            textTransform: "uppercase",
+            letterSpacing: "0.15em",
+            color: "var(--color-gold)",
+            textDecoration: "none",
+            transition: "all 0.3s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.backgroundColor = "var(--color-gold)";
+            e.target.style.color = "white";
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.backgroundColor = "transparent";
+            e.target.style.color = "var(--color-gold)";
+          }}
         >
           View My Work
         </motion.a>

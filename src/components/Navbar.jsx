@@ -3,7 +3,10 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Portfolio", href: "#portfolio" },
+  { label: "Videography", href: "#videography" },
+  { label: "Photography", href: "#photography" },
+  { label: "Services", href: "#services" },
+  { label: "Rates", href: "#rates" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -21,27 +24,66 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-cream/80 backdrop-blur-md shadow-sm"
-          : "bg-transparent"
-      }`}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        transition: "all 0.3s ease",
+        backgroundColor: scrolled ? "rgba(250, 248, 245, 0.85)" : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        boxShadow: scrolled ? "0 1px 3px rgba(0,0,0,0.06)" : "none",
+      }}
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          padding: "1.25rem 2rem",
+        }}
+      >
         <a
           href="#"
-          className="font-serif text-xl font-semibold tracking-tight text-ink"
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "1.5rem",
+            fontWeight: 600,
+            color: "var(--color-ink)",
+            textDecoration: "none",
+            letterSpacing: "-0.01em",
+          }}
         >
           Caitlyn D.
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "2.5rem",
+            listStyle: "none",
+          }}
+          className="hidden md:flex"
+        >
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-medium tracking-wide text-charcoal/70 transition-colors hover:text-gold"
+                style={{
+                  fontSize: "0.875rem",
+                  fontWeight: 500,
+                  letterSpacing: "0.05em",
+                  color: "var(--color-stone)",
+                  textDecoration: "none",
+                  transition: "color 0.2s ease",
+                }}
+                onMouseEnter={(e) => (e.target.style.color = "var(--color-gold)")}
+                onMouseLeave={(e) => (e.target.style.color = "var(--color-stone)")}
               >
                 {l.label}
               </a>
@@ -52,7 +94,14 @@ export default function Navbar() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen((o) => !o)}
-          className="text-2xl text-charcoal md:hidden"
+          className="md:hidden"
+          style={{
+            fontSize: "1.75rem",
+            color: "var(--color-charcoal)",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+          }}
           aria-label="Toggle menu"
         >
           {menuOpen ? <HiX /> : <HiMenuAlt3 />}
@@ -61,14 +110,36 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="border-t border-sand/50 bg-cream/95 backdrop-blur-md md:hidden">
-          <ul className="flex flex-col items-center gap-6 py-8">
+        <div
+          className="md:hidden"
+          style={{
+            borderTop: "1px solid var(--color-sand)",
+            backgroundColor: "rgba(250, 248, 245, 0.97)",
+            backdropFilter: "blur(12px)",
+          }}
+        >
+          <ul
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: "1.75rem",
+              padding: "2.5rem 0",
+              listStyle: "none",
+            }}
+          >
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={close}
-                  className="text-base font-medium text-charcoal transition-colors hover:text-gold"
+                  style={{
+                    fontSize: "1.125rem",
+                    fontWeight: 500,
+                    color: "var(--color-charcoal)",
+                    textDecoration: "none",
+                    transition: "color 0.2s ease",
+                  }}
                 >
                   {l.label}
                 </a>

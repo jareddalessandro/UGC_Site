@@ -9,9 +9,36 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-sand/50 bg-cream px-6 py-10">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-5 text-center">
-        <div className="flex gap-4">
+    <footer
+      style={{
+        borderTop: "1px solid var(--color-sand)",
+        backgroundColor: "white",
+        padding: "3.5rem 2rem",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1.5rem",
+          textAlign: "center",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "var(--font-serif)",
+            fontSize: "1.25rem",
+            fontWeight: 600,
+            color: "var(--color-ink)",
+          }}
+        >
+          Caitlyn D.
+        </p>
+
+        <div style={{ display: "flex", gap: "1.25rem" }}>
           {socials.map((s) => (
             <a
               key={s.label}
@@ -19,14 +46,30 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={s.label}
-              className="text-stone transition-colors hover:text-gold"
+              style={{
+                color: "var(--color-stone)",
+                fontSize: "1.125rem",
+                transition: "color 0.2s ease",
+                textDecoration: "none",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "var(--color-gold)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "var(--color-stone)")
+              }
             >
-              <s.icon className="text-lg" />
+              <s.icon />
             </a>
           ))}
         </div>
 
-        <p className="text-xs text-stone">
+        <p
+          style={{
+            fontSize: "0.8125rem",
+            color: "var(--color-stone)",
+          }}
+        >
           &copy; {new Date().getFullYear()} Caitlyn Dalessandro. All rights
           reserved.
         </p>
